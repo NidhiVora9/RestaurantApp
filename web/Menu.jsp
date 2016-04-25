@@ -29,8 +29,8 @@
 
 		<sql:setDataSource var="menudata"
 			driver="oracle.jdbc.driver.OracleDriver"
-			url="jdbc:oracle:thin:@localhost:1521:reslife" scope="session"
-			user="System" password="Parth8891" />
+			url="jdbc:oracle:thin:@localhost:1521:xe" scope="session"
+			user="system" password="admin" />
 
 
 
@@ -46,7 +46,7 @@
 				<div class="row">
 					<c:forEach var="row" items="${pizzaQuery.rows}">
 						<div class="col-sm-4">
-							<img class="img-rounded" width=304 height=304
+							<img class="img-rounded" width=304 
 								alt="${row.menu_name}" src="${row.menu_imageurl}">
 							<h2>
 								<c:out value="${row.menu_name}" />
@@ -76,7 +76,7 @@
 				<div class="row">
 					<c:forEach var="row" items="${sideQuery.rows}">
 						<div class="col-sm-4">
-							<img class="img-rounded" width=304 height=304
+							<img class="img-rounded" width=304 
 								alt="${row.menu_name}" src="${row.menu_imageurl}">
 							<h2>
 								<c:out value="${row.menu_name}" />
@@ -104,7 +104,7 @@
 				<div class="row">
 					<c:forEach var="row" items="${DrinkQuery.rows}">
 						<div class="col-sm-4">
-							<img class="img-rounded" width=304 height=304
+							<img class="img-rounded" width=304 
 								alt="${row.menu_name}" src="${row.menu_imageurl}">
 							<h2>
 								<c:out value="${row.menu_name}" />
@@ -127,13 +127,13 @@
 					sql="select menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
 				from RA_MENU m,RA_MENU_CATEGORY c
 				where m.CATEGORY_ID=c.CATEGORY_ID
-					and c.CATEGORY_NAME='Desserts'"
+					and c.CATEGORY_NAME='Deserts'"
 					dataSource="${menudata}"></sql:query>
-				<h3>Pizza</h3>
+				<h3>Desserts</h3>
 				<div class="row">
 					<c:forEach var="row" items="${DessertQuery.rows}">
 						<div class="col-sm-4">
-							<img class="img-rounded" width=304 height=304
+							<img class="img-rounded" width=304 
 								alt="${row.menu_name}" src="${row.menu_imageurl}">
 							<h2>
 								<c:out value="${row.menu_name}" />
@@ -161,7 +161,7 @@
 				<div class="row">
 					<c:forEach var="row" items="${extrasQuery.rows}">
 						<div class="col-sm-4">
-							<img class="img-rounded" width=304 height=304
+							<img class="img-rounded" width=304
 								alt="${row.menu_name}" src="${row.menu_imageurl}">
 							<h2>
 								<c:out value="${row.menu_name}" />
@@ -180,5 +180,9 @@
 			</div>
 		</div>
 	</div>
+	
+	<footer class="container-fluid bg-4 text-center">
+  	<p>Made By <span class="footer_names">Parth Shah, Nidhi Vora, Hai</span></p>
+	</footer>
 </body>
 </html>
