@@ -33,8 +33,7 @@
 	<ul class="nav navbar-nav navbar-right">
 		<li><a href="#"><span
 				class="glyphicon glyphicons-shopping-cart"></span> My Cart</a></li>
-		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
-				Login</a></li>
+		<li><form method="GET" action="googleplus"> <button type="submit"><span class="glyphicon glyphicon-log-in">Login</button></form></li>
 	</ul>
 	</nav>
 	
