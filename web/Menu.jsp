@@ -180,9 +180,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<footer class="container-fluid bg-4 text-center">
-  	<p>Made By <span class="footer_names">Parth Shah, Nidhi Vora, Hai</span></p>
-	</footer>
+<jsp:include page="./WEB-INF/Footer.jsp"></jsp:include>
 </body>
 </html>
