@@ -34,21 +34,38 @@
   	</a>
 </div>
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-offset-1 col-sm-4 offers">
-			<img src="images/offers/offer_1.jpg" width="350" height="300">
+	<div class="row text-center">
+		<div class="col-sm-4 offers">
+			<img src="images/offers/offer_1.jpg" width="300" height="250">
 			<h3>Large Pizza offer</h3>
-			<span>Large one topping pizza</span>
+			<span>Large one topping pizza<h1>$8.99</h1></span>
+			<button class="btn btn-success" value="Learn More">Learn More</button>
 		</div>
 		<div class="col-sm-4 offers">
-			<img src="images/offers/offer_1.jpg" width="350" height="300">
-			<h3>Large Pizza offer</h3>
-			<span>Large one topping pizza</span>
+			<img src="images/offers/offer_2.jpg" width="300" height="250">
+			<h3>Two medium pizzas</h3>
+			<span>Two medium two topping pizzas for $6.99 each</span>
+			<button class="btn btn-success" value="Learn More">Learn More</button>
 		</div>
 		<div class="col-sm-4 offers">
-			<img src="images/offers/offer_1.jpg" width="350" height="300">
-			<h3>Large Pizza offer</h3>
-			<span>Large one topping pizza</span>
+			<img src="images/offers/offer_3.jpg" width="300" height="250">
+			<h3>Brownie</h3>
+			<span>Try our double chocolate chip brownie $6 <h1>$6</h1></span>
+			<button class="btn btn-success" value="Learn More">Learn More</button>
+		</div>
+	</div>
+	<div class="row text-center">
+		<div class="col-sm-6 offers">
+			<img src="images/offers/offer_4.jpg" width="300" height="250">
+			<h3>Pepperoni Rolls</h3>
+			<span>New Pepperoni Rolls $5</span>
+			<button class="btn btn-success" value="Learn More">Learn More</button>
+		</div>
+		<div class="col-sm-6 offers">
+			<img src="images/offers/offer_5.jpg" width="300" height="250">
+			<h3>Wings</h3>
+			<span>Add chicken wings to your order<h1>$5.99</h1></span>
+			<button class="btn btn-success" value="Learn More">Learn More</button>
 		</div>
 	</div>
 </div>
