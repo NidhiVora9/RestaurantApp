@@ -27,13 +27,17 @@
 }
 .carousel-inner
 {
-	background:#000000 !important;
+	background:#ffffff !important;
 }
 .item img {
     width: 80%;
     max-height:560px;
 	margin: auto;
 
+}
+.offers
+{
+	margin-top:4%;
 }
 
 .carousel-caption h3 {

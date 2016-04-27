@@ -33,6 +33,26 @@
     	<span class="sr-only">Next</span>
   	</a>
 </div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-offset-1 col-sm-4 offers">
+			<img src="images/offers/offer_1.jpg" width="350" height="300">
+			<h3>Large Pizza offer</h3>
+			<span>Large one topping pizza</span>
+		</div>
+		<div class="col-sm-4 offers">
+			<img src="images/offers/offer_1.jpg" width="350" height="300">
+			<h3>Large Pizza offer</h3>
+			<span>Large one topping pizza</span>
+		</div>
+		<div class="col-sm-4 offers">
+			<img src="images/offers/offer_1.jpg" width="350" height="300">
+			<h3>Large Pizza offer</h3>
+			<span>Large one topping pizza</span>
+		</div>
+	</div>
+</div>
+
 <span class="text-center"><h2>We are located at</h2></span>
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
 </script><div class="map-div" style='overflow:hidden;height:440px;width:100%;'>
