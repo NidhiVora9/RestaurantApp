@@ -202,11 +202,7 @@
 			</div>
 		</div>
 	</div>
+<jsp:include page="./WEB-INF/Footer.jsp"></jsp:include>
 
-	<footer class="container-fluid bg-4 text-center">
-		<p>
-			Made By <span class="footer_names">Parth Shah, Nidhi Vora, Hai Nguyen</span>
-		</p> 
-	</footer>
 </body>
 </html>

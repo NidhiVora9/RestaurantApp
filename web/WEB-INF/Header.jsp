@@ -29,7 +29,8 @@
       <a class="navbar-brand" href="/Restaurant-app/Menu.jsp">Arthur's Famous Pizza</a>
     </div>
 	<ul class="nav navbar-nav ">
-		<li><a href="#">Home</a></li>
+		<li><a href="Index.jsp">Home</a></li>
+		<li><a href="Menu.jsp">Menu</a></li>
 		<li><a href="#">Contact Us</a></li>
 	</ul>
 
