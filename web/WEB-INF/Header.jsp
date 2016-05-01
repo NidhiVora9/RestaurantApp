@@ -11,6 +11,10 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script
+	src="js/login.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="489628980129-la6j4togkesoj56vb77n1ov1fgnhop8j.apps.googleusercontent.com">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
@@ -33,7 +37,7 @@
 	<ul class="nav navbar-nav navbar-right">
 		<li><a href="#"><span
 				class="glyphicon glyphicons-shopping-cart"></span> My Cart</a></li>
-		<li><form method="GET" action="googleplus"> <button type="submit"><span class="glyphicon glyphicon-log-in">Login</button></form></li>
+		<li><div class="g-signin2" data-onsuccess="onSignIn"></div></li>
 	</ul>
 	</nav>
 	

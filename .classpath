@@ -25,5 +25,8 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="web/WEB-INF/lib/jstl-1.2.jar"/>
 	<classpathentry kind="lib" path="web/WEB-INF/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/commons-logging-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/google-api-client-1.21.0-sources.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/google-oauth-client-1.21.0-sources.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
