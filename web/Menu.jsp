@@ -28,9 +28,9 @@
 		</ul>
 
 		<sql:setDataSource var="menudata"
-			driver="oracle.jdbc.driver.OracleDriver"
-			url="jdbc:oracle:thin:@localhost:1521:reslife" scope="page"
-			user="system" password="Parth8891" />
+			driver="${initParam['driver']}"
+			url="${initParam['dburl']}" scope="page"
+			user="${initParam['user']}" password="${initParam['password']}" />
 
 
 

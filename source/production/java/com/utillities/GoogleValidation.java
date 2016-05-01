@@ -36,7 +36,7 @@ public class GoogleValidation {
 
 					  // Print user identifier
 					  String userId = payload.getSubject();
-					  System.out.println("User ID: " + userId);
+					  //System.out.println("User ID: " + userId);
 
 					  // Get profile information from payload
 					  String email = payload.getEmail();
