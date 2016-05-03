@@ -4,22 +4,20 @@
   <welcome-file-list>
     <welcome-file>Index.jsp</welcome-file>
   </welcome-file-list>
-  
   <context-param>
-     <param-name>driver</param-name>
-     <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+    <param-name>driver</param-name>
+    <param-value>oracle.jdbc.driver.OracleDriver</param-value>
   </context-param>
   <context-param>
-     <param-name>dburl</param-name>
-     <param-value>jdbc:oracle:thin:@localhost:1521:reslife</param-value>
-  </context-param> 
+    <param-name>dburl</param-name>
+    <param-value>jdbc:oracle:thin:@localhost:1521:reslife</param-value>
+  </context-param>
   <context-param>
-     <param-name>user</param-name>
-     <param-value>system</param-value>
-  </context-param> 
+    <param-name>user</param-name>
+    <param-value>system</param-value>
+  </context-param>
   <context-param>
-     <param-name>password</param-name>
-     <param-value>Parth8891</param-value>
-  </context-param> 
-   
+    <param-name>password</param-name>
+    <param-value>Parth8891</param-value>
+  </context-param>
 </web-app>

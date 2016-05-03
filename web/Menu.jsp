@@ -5,15 +5,9 @@
 
 <html>
 <head>
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Menu</title>
-<jsp:include page="./WEB-INF/Header.jsp"></jsp:include>
+<jsp:include page="./WEB-INF/jsp/Header.jsp"></jsp:include>
 </head>
 <body>
 
@@ -37,7 +31,7 @@
 		<div class="tab-content">
 			<div id="home" class="tab-pane fade in active">
 				<sql:query var="pizzaQuery"
-					sql="select menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
+					sql="select menu_id,menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
 				from RA_MENU m,RA_MENU_CATEGORY c
 				where m.CATEGORY_ID=c.CATEGORY_ID
 					and c.CATEGORY_NAME='Pizza'"
@@ -54,7 +48,7 @@
 							<h4>
 								$
 								<c:out value="${row.menu_price}" />
-								- <input type="button" class="btn btn-info" value="Order" />
+								- <input type="button" class="btn btn-info" value="Order" onclick="onOrder(${row.menu_id});"/>
 							</h4>
 							<p>
 								<c:out value="${row.menu_description}" />
@@ -71,7 +65,7 @@
 
 			<div id="menu1" class="tab-pane fade">
 				<sql:query var="sideQuery"
-					sql="select menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
+					sql="select menu_id,menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
 				from RA_MENU m,RA_MENU_CATEGORY c
 				where m.CATEGORY_ID=c.CATEGORY_ID
 					and c.CATEGORY_NAME='Sides'"
@@ -86,9 +80,9 @@
 								<c:out value="${row.menu_name}" />
 							</h2>
 							<h4>
-								(
+								$
 								<c:out value="${row.menu_price}" />
-								)
+								- <input type="button" class="btn btn-info" value="Order" onclick="onOrder(${row.menu_id});"/>
 							</h4>
 							<p>
 								<c:out value="${row.menu_description}" />
@@ -104,7 +98,7 @@
 			</div>
 			<div id="menu2" class="tab-pane fade">
 				<sql:query var="DrinkQuery"
-					sql="select menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
+					sql="select menu_id,menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
 				from RA_MENU m,RA_MENU_CATEGORY c
 				where m.CATEGORY_ID=c.CATEGORY_ID
 					and c.CATEGORY_NAME='Drinks'"
@@ -119,9 +113,9 @@
 								<c:out value="${row.menu_name}" />
 							</h2>
 							<h4>
-								(
+								$
 								<c:out value="${row.menu_price}" />
-								)
+								- <input type="button" class="btn btn-info" value="Order" onclick="onOrder(${row.menu_id});"/>
 							</h4>
 							<p>
 								<c:out value="${row.menu_description}" />
@@ -137,7 +131,7 @@
 			</div>
 			<div id="menu3" class="tab-pane fade">
 				<sql:query var="DessertQuery"
-					sql="select menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
+					sql="select menu_id,menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
 				from RA_MENU m,RA_MENU_CATEGORY c
 				where m.CATEGORY_ID=c.CATEGORY_ID
 					and c.CATEGORY_NAME='Desserts'"
@@ -153,9 +147,9 @@
 								<c:out value="${row.menu_name}" />
 							</h2>
 							<h4>
-								(
+								$
 								<c:out value="${row.menu_price}" />
-								)
+								- <input type="button" class="btn btn-info" value="Order" onclick="onOrder(${row.menu_id});"/>
 							</h4>
 							<p>
 								<c:out value="${row.menu_description}" />
@@ -170,7 +164,7 @@
 			</div>
 			<div id="menu4" class="tab-pane fade">
 				<sql:query var="extrasQuery"
-					sql="select menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
+					sql="select menu_id,menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
 				from RA_MENU m,RA_MENU_CATEGORY c
 				where m.CATEGORY_ID=c.CATEGORY_ID
 					and c.CATEGORY_NAME='Extras'"
@@ -185,9 +179,9 @@
 								<c:out value="${row.menu_name}" />
 							</h2>
 							<h4>
-								(
+								$
 								<c:out value="${row.menu_price}" />
-								)
+								- <input type="button" class="btn btn-info" value="Order" onclick="onOrder(${row.menu_id});"/>
 							</h4>
 							<p>
 								<c:out value="${row.menu_description}" />
@@ -202,7 +196,7 @@
 			</div>
 		</div>
 	</div>
-<jsp:include page="./WEB-INF/Footer.jsp"></jsp:include>
+<jsp:include page="./WEB-INF/jsp/Footer.jsp"></jsp:include>
 
 </body>
 </html>

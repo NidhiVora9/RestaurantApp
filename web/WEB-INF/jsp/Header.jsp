@@ -5,13 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/login.js"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <meta name="google-signin-client_id"
@@ -33,19 +30,21 @@
 	<ul class="nav navbar-nav ">
 		<li><a href="Index.jsp">Home</a></li>
 		<li><a href="Menu.jsp">Menu</a></li>
+		<li><a href="chatdirector">Chat</a></li>
 		<li><a href="#">Contact Us</a></li>
 	</ul>
 
 	<ul class="nav navbar-nav navbar-right">
 		<li><a href="#"><span
 				class="glyphicon glyphicons-shopping-cart"></span> My Cart</a></li>
-		<li><a><div class="g-signin2" data-width="100"
-					data-height="21" data-onsuccess="onSignIn"></div></a></li>
+		<li><a
+			href="javascript:window.open('Signin.html', 'Google+ SignIn', 'width=200,height=300');">Sign
+				In</a></li>
 		<%
 			User user = (User) session.getAttribute("usero");
 			if (user != null) {
 		%>
-		<li><a onclick="signOut()">Sign out</a></li>
+		<li><a href="javascript:signOut();">Sign out</a></li>
 		<%
 			}
 		%>
