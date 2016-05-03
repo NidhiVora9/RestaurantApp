@@ -1,39 +1,28 @@
 package com.main.servlets;
 
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
-import com.google.api.client.http.HttpTransport;
-import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.JsonFactory;
-import com.google.api.client.json.jackson2.JacksonFactory;
+
 import com.main.DBO.UserDBO;
 import com.main.dto.User;
 import com.utillities.GoogleValidation;
 
 import java.io.IOException;
-import java.security.GeneralSecurityException;
 import java.sql.SQLException;
-import java.util.Arrays;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.jsp.jstl.core.Config;
-
-import org.apache.http.impl.io.SocketOutputBuffer;
 
 /**
  * Servlet implementation class TokensignIn
  */
 @WebServlet("/tokensignin")
 public class TokensignIn extends HttpServlet {
+
+	 
+	private static final long serialVersionUID = 1L;
 
 	public TokensignIn() {
 		super();

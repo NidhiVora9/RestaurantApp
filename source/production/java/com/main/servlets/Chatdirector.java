@@ -10,15 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.main.dto.User;
+
 /**
- * Servlet implementation class Signout
+ * Servlet implementation class Chatdirector
  */
-@WebServlet("/signout")
-public class Signout extends HttpServlet {
+@WebServlet("/chatdirector")
+public class Chatdirector extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    
-    public Signout() {
+   
+    public Chatdirector() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,23 +29,31 @@ public class Signout extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	
 		HttpSession session = request.getSession(false);
-		if (session != null) {
-			session.setAttribute("usero", null);
-			session.invalidate();
-			System.out.println("User has ben signed out");
+		if(session != null)
+		{
+		User user = (User)session.getAttribute("usero");
+		if(user == null)
+		{
+			RequestDispatcher rd = request.getRequestDispatcher("./WEB-INF/jsp/Chat_No_User.jsp");
+			rd.forward(request, response);
+		}
+		else
+		{
+			String ip = java.net.InetAddress.getLocalHost().getHostAddress();
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Chat.jsp?user=" + user.getName() +
+					"&ip=" + ip + "&img=" + user.getImageURL());
+			rd.forward(request, response);
+
+		}
+		}
+		else
+		{
+			RequestDispatcher rd = request.getRequestDispatcher("./WEB-INF/jsp/Chat_No_User.jsp");
+			rd.forward(request, response);
 		}
 		
-//		session.invalidate();
-//		String referrer = request.getHeader("referer");
-//		String pathInfo = request.getRequestURL().toString();
-//		String[] r = referrer.split("/");
-//		System.out.println("Path="+referrer);
-//		System.out.println("Path="+r[r.length-1]);
-//		RequestDispatcher rd = request.getRequestDispatcher(r[r.length-1]);
-//		rd.forward(request, response);
-	
 	}
 
 	/**
