@@ -59,7 +59,6 @@
 			<img src="images/offers/offer_4.jpg" width="300" height="250">
 			<h3>Pepperoni Rolls</h3>
 			<span>New Pepperoni Rolls $5</span>
-			<button class="btn btn-success" value="Learn More">Learn More</button>
 		</div>
 		<div class="col-sm-6 offers">
 			<img src="images/offers/offer_5.jpg" width="300" height="250">
@@ -68,6 +67,19 @@
 			<button class="btn btn-success" value="Learn More">Learn More</button>
 
 		</div>
+
+	<span class="text-center"><h2>We are located at</h2></span>
+	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
+		
+	</script>
+	<div class="map-div"
+		style='overflow: hidden; height: 440px; width: 100%;'>
+		<div id='gmap_canvas' style='height: 440px; width: 100%;'></div>
+		<div>
+			<small><a href="http://embedgooglemaps.com"> embed google
+					maps </a></small>
+		</div>
+
 		<style>
 #gmap_canvas img {
 	max-width: none !important;
@@ -101,6 +113,5 @@
 		google.maps.event.addDomListener(window, 'load', init_map);
 	</script>
 	<jsp:include page="./WEB-INF/Footer.jsp"></jsp:include>
-
 </body>
 </html>

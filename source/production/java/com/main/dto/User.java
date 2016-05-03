@@ -1,6 +1,9 @@
 package com.main.dto;
 
+import java.util.HashMap;
+
 public class User {
+	
 String UserId;
 String Email;
 String Name;
@@ -8,6 +11,7 @@ String ImageURL;
 String Locale;
 String FamilyName;
 String GivenName;
+
 public String getUserId() {
 	return UserId;
 }
@@ -49,6 +53,18 @@ public String getGivenName() {
 }
 public void setGivenName(String givenName) {
 	GivenName = givenName;
+}
+
+public HashMap<String,String> getparam()
+{
+HashMap<String,String> par = new HashMap<String,String>();
+
+par.put("user_id", Email);
+par.put("user_fname", GivenName);
+par.put("user_lname", FamilyName);
+par.put("user_img", ImageURL);
+
+return par;
 }
 
 

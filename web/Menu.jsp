@@ -28,9 +28,9 @@
 		</ul>
 
 		<sql:setDataSource var="menudata"
-			driver="oracle.jdbc.driver.OracleDriver"
-			url="jdbc:oracle:thin:@localhost:1521:xe" scope="page"
-			user="system" password="admin" />
+			driver="${initParam['driver']}"
+			url="${initParam['dburl']}" scope="page"
+			user="${initParam['user']}" password="${initParam['password']}" />
 
 
 
@@ -140,7 +140,7 @@
 					sql="select menu_name,menu_description,'.'||menu_imageurl as menu_imageurl,menu_price 
 				from RA_MENU m,RA_MENU_CATEGORY c
 				where m.CATEGORY_ID=c.CATEGORY_ID
-					and c.CATEGORY_NAME='Deserts'"
+					and c.CATEGORY_NAME='Desserts'"
 					dataSource="${menudata}"></sql:query>
 				<h3>Desserts</h3>
 				<div class="row">
