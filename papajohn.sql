@@ -36,7 +36,7 @@ insert into RA_MENU values(1,'Pepperoni',1,'Premium pepperoni, 100% real cheese 
 insert into RA_MENU values(2,'Sausage',1,'Sausage and 100% real cheese made from mozzarella with your choice of crust.','/images/pizza/sausage.jpg','10.82');
 insert into RA_MENU values(3,'Cheese Pizza',1,'100% real cheese made from mozzarella, pizza sauce and your choice of crust.','/images/pizza/cheese.jpg','90.12');
 insert into RA_MENU values(4,'Johns Favorite',1,'Pepperoni, sausage, a six-cheese blend and Italian seasoning.','/images/pizza/john.jpg','11.72');
-insert into RA_MENU values(5,'The Works',1,'Pepperoni, Canadian bacon, spicy Italian sausage, onions, green peppers, mushrooms and black olives.','/images//pizzaworks.jpg','15.02');
+insert into RA_MENU values(5,'The Works',1,'Pepperoni, Canadian bacon, spicy Italian sausage, onions, green peppers, mushrooms and black olives.','/images//pizza/works.jpg','15.02');
 insert into RA_MENU values(6,'The Meats',1,'Pepperoni, sausage, beef, bacon and Canadian bacon.','/images/pizza/meat.jpg','8.21');
 insert into RA_MENU values(7,'Spicy Italian',1,'Pepperoni plus a double portion of spicy Italian sausage.','/images/pizza/spicy.jpg','9.99');
 insert into RA_MENU values(8,'BBQ Chicken Bacon',1,'BBQ sauce topped with all-white chicken, bacon and onions.','/images/pizza/bacon.jpg','12.99');
