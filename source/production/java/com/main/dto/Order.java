@@ -35,6 +35,30 @@ public class Order {
 		}
 		
 	}
+	
+	public void increment(int id)
+	{
+		if(items.containsKey(id))
+		{
+			Item it = items.remove(id);
+			it.count++;
+			items.put(it.id, it);
+		}
+	}
+	
+	public void removeitem(int id)
+	{
+		if(items.containsKey(id))
+		{
+			Item it = items.remove(id);
+		}
+	}
+	
+	public int getsize()
+	{
+		return items.size();
+	}
+	
 	public static class Item
 	{
 	int id;
@@ -45,6 +69,12 @@ public class Order {
 	float price;
 	int count = 1;
 	
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	public String getImageURL() {
 		return imageURL;
 	}

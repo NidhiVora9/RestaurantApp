@@ -15,7 +15,7 @@ menu_name varchar2(50) NOT NULL,
 category_id number(3) NOT NULL,
 menu_description varchar2(200),
 menu_imageurl varchar2(50) NOT NULL,
-menu_price number(3,2) NOT NULL,
+menu_price number(4,2) NOT NULL,
 CONSTRAINT pk_menu PRIMARY KEY (menu_id),
 CONSTRAINT fk_menu_category FOREIGN KEY (category_id) REFERENCES RA_MENU_CATEGORY(category_id));
 
