@@ -3,6 +3,7 @@ package com.main.DBO;
 import java.sql.Statement;
 
 import javax.naming.spi.DirStateFactory.Result;
+import javax.servlet.ServletContext;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,6 +15,7 @@ import com.utillities.DBOperation;
 
 public class UserDBO {
 
+	
 	public int insertUser(User u) throws ClassNotFoundException, SQLException {
 		Connection con= DBOperation.get_Connection();
 		PreparedStatement ps = con.prepareStatement("insert into RA_User values(?,?,?,?)");
