@@ -41,8 +41,7 @@ public class LoginFilter implements Filter {
 			ipAddress = request.getRemoteAddr();
 		
 		DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-		Date now = new Date();
-		
+		Date now = new Date();		
 		String visited_on = df.format(now).toString();
 		UserDBO udb = new UserDBO();
 		try {

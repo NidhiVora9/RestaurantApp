@@ -1,17 +1,14 @@
 package com.main.dto;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Order {
 
-	HashMap<Integer,Item> items;
-	
+	public HashMap<Integer,Item> items;
 	public Order()
 	{
 		items = new HashMap<Integer,Item>();
 	}
-	
 	public void additem(int id, String Name, String Category,String Description,float price)
 	{
 		Item i = new Item();
@@ -23,7 +20,6 @@ public class Order {
 		
 		this.additem(i);
 	}
-	
 	public void additem(Item i)
 	{
 
@@ -39,8 +35,6 @@ public class Order {
 		}
 		
 	}
-	
-	
 	public static class Item
 	{
 	int id;
@@ -49,7 +43,7 @@ public class Order {
 	String Description;
 	String imageURL;
 	float price;
-	int count = 0;
+	int count = 1;
 	
 	public String getImageURL() {
 		return imageURL;
@@ -87,8 +81,6 @@ public class Order {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-	
-	
 	}
 
 }

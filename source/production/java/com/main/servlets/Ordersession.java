@@ -3,6 +3,7 @@ package com.main.servlets;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +20,6 @@ import com.main.dto.Order;
 @WebServlet("/ordersession")
 public class Ordersession extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -62,6 +62,7 @@ public class Ordersession extends HttpServlet {
 				System.out.println(item.getName()+" has been added in session");
 				session.setAttribute("order", o);
 				response.getWriter().write(item.getName());
+
 			}
 			}
 			else

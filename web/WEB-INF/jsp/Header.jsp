@@ -31,6 +31,7 @@
 		<li><a href="Index.jsp">Home</a></li>
 		<li><a href="Menu.jsp">Menu</a></li>
 		<li><a href="chatdirector">Chat</a></li>
+		<li><a href="Order.jsp">Orders</a></li>
 		<li><a href="#">Contact Us</a></li>
 	</ul>
 

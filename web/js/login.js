@@ -29,8 +29,6 @@ function onSignIn(googleUser) {
   xhr.send('idtoken=' + id_token);
 
 }
-
-
 function onOrder(id) {
 	  
 	  var xhr = new XMLHttpRequest();

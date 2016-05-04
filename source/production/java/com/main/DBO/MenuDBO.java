@@ -14,24 +14,7 @@ import com.main.dto.User;
 import com.utillities.DBOperation;
 
 public class MenuDBO {
-
-
 	
-//public int insertUser(User u) throws ClassNotFoundException, SQLException
-//{
-//Connection con = DBOperation.get_Connection();
-//PreparedStatement ps = con.prepareStatement("insert into RA_User values(?,?,?,?)");
-//ps.setString(1, u.getEmail());
-//ps.setString(2, u.getGivenName());
-//ps.setString(3, u.getFamilyName());
-//ps.setString(4, u.getImageURL());
-//
-//int ret= ps.executeUpdate();
-//  
-//System.out.println("inserted user"+ret);
-//return ret;
-//}
-
 public Order.Item get_item(int id) throws ClassNotFoundException, SQLException {
 Connection con = DBOperation.get_Connection();
 Statement st = con.createStatement();

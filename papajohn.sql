@@ -30,7 +30,7 @@ insert into RA_MENU_CATEGORY values(1,'Pizza');
 insert into RA_MENU_CATEGORY values(2,'Sides');
 insert into RA_MENU_CATEGORY values(3,'Drinks');
 insert into RA_MENU_CATEGORY values(4,'Extras');
-insert into RA_MENU_CATEGORY values(5,'Deserts');
+insert into RA_MENU_CATEGORY values(5,'Desserts');
 
 insert into RA_MENU values(1,'Pepperoni',1,'Premium pepperoni, 100% real cheese made from mozzarella and your choice of crust.','/images/pizza/pepperoni.jpg','10.22');
 insert into RA_MENU values(2,'Sausage',1,'Sausage and 100% real cheese made from mozzarella with your choice of crust.','/images/pizza/sausage.jpg','10.82');
@@ -87,5 +87,4 @@ insert into RA_MENU values(48,'Chocolate Chip Cookie',5,'Loaded with chocolate c
 insert into RA_MENU values(49,'Double Chocolate Chip Brownie',5,'Filled with chocolate chips, cut into 9 squares and served warm','/images/desserts/4.jpg','1.99');
 
 commit;
-
 

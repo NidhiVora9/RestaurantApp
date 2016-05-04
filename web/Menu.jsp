@@ -10,7 +10,6 @@
 <jsp:include page="./WEB-INF/jsp/Header.jsp"></jsp:include>
 </head>
 <body>
-
 	<div class="container">
 		<h2>Menu</h2>
 		<ul class="nav nav-tabs nav-justified">
