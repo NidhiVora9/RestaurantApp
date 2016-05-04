@@ -55,7 +55,7 @@ public class TokensignIn extends HttpServlet {
 			System.out.println("Invalid User");
 			response.getWriter().write("502");
 		} else {
-			HttpSession session = request.getSession();
+			HttpSession session = request.getSession(false);
 			session.setAttribute("usero", user);
 			UserDBO udb = new UserDBO();
 			try {

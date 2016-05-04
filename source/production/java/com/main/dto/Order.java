@@ -1,13 +1,14 @@
 package com.main.dto;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 public class Order {
 
-	public HashMap<Integer,Item> items;
+	public TreeMap<Integer,Item> items;
 	public Order()
 	{
-		items = new HashMap<Integer,Item>();
+		items = new TreeMap<Integer,Item>();
 	}
 	public void additem(int id, String Name, String Category,String Description,float price)
 	{

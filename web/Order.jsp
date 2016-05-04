@@ -30,12 +30,14 @@
 					{
 					if(order.getsize()!=0)
 					{
-					HashMap<Integer, Item> items = order.items;
 					String cat_Pizza = "";
 					String cat_Dessert = "";
 					String cat_Drinks = "";
 					String cat_Sides = "";
 					String cat_Extras = "";
+					float tax = 0f;
+					float total = 0f;
+					float grandtotal = 0f;
 				%>
 				<table class="table table-striped">
 			<thead>
@@ -49,38 +51,47 @@
 			</thead>
 			<tbody>
 				<% 
-					Iterator it = items.entrySet().iterator();
-					while (it.hasNext()) {
-						HashMap.Entry item = (HashMap.Entry) it.next();
+				for(Map.Entry<Integer,Item> item : order.items.entrySet()) {
 						Order.Item i = (Order.Item) item.getValue();
+						total += (i.getPrice()*i.getCount());
+						tax = 0.06f * total;
+						grandtotal = total + tax;
 				%>
 				<tr>
 				<td><img src="./images/thumbnails<%=i.getImageURL()%>" class="
 						img-thumbnail" width="100" height="100"></td>
 					<td><%=i.getName()%>
 						<p><%=i.getDescription()%></p></td>
-					<td><input type="number" value="<%=i.getCount()%>"></td>
-					<td><%=i.getPrice()%></td>
+					<td><input type="number" onchange="order_change(<%=i.getId()%>);" min=1 value="<%=i.getCount()%>"></td>
+					<td><%=i.getPrice()*i.getCount()%></td>
 					<td><a href="removeorder?order=<%=i.getId()%>"><span class="glyphicon glyphicon-trash"></span></a></td>
 				</tr>
 				<%
-					/*
-											out.println(i.getId());
-											out.println(i.getName());
-											out.println(i.getPrice());
-											out.println(i.getImageURL());
-											 switch(i.getCategory())
-											{
-											case "Pizza":
-											case "Drinks":
-											case "Desserts":
-											case "Extras":
-											case "Sides":
-											Default:
-											} */
 					}
 				%>
+			
+			<tr>
+			<td colspan="2"></td>
+			<td align="right"><b>Total =</b></td>
+			<td align="left"><%=total%></td>
+			<td></td>
+			</tr>
+			
+			<tr>
+			<td colspan="2"></td>
+			<td align="right"><b> Tax =</b></td>
+			<td align="left"><%=tax%></td>
+			<td></td>
+			</tr>
+			<tr>
+			<td colspan="2"></td>
+			<td align="right"><b>Grand Total =</b></td>
+			<td align="left"><%=grandtotal%></td>
+			<td></td>
+			</tr>
+			
 			</tbody>
+			
 		</table>
 		<%
 					}
