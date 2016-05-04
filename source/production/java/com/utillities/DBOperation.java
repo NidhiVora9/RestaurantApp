@@ -13,7 +13,7 @@ public static Connection get_Connection() throws ClassNotFoundException, SQLExce
 	if(con == null)
 	{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "admin");
+		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:reslife", "system", "Parth8891");
 		return con;
 	}
 	else

@@ -36,22 +36,27 @@
 			Famous Pizza</a>
 	</div>
 	<ul class="nav navbar-nav ">
-		<li><a href="Index.jsp">Home</a></li>
-		<li><a href="Menu.jsp">Menu</a></li>
-		<li><a href="chatdirector">Chat</a></li>
+		<li><a href="Index.jsp"><span
+				class="glyphicon glyphicon-home"></span> Home</a></li>
+		<li><a href="Menu.jsp"><span
+				class="glyphicon glyphicon-list-alt"></span> Menu</a></li>
+		<li><a href="chatdirector"><span
+				class="glyphicon glyphicon-comment"></span> Chat</a></li>
 	</ul>
 
 	<ul class="nav navbar-nav navbar-right">
 		<li><a href="Order.jsp"><span
 				class="glyphicon glyphicon-shopping-cart"></span> My Cart</a></li>
 		<li><a
-			href="javascript:window.open('Signin.html', 'Google+ SignIn', 'width=200,height=300');">Sign
+			href="javascript:window.open('Signin.html', 'Google+ SignIn', 'width=200,height=300');"><span
+				class="glyphicon glyphicon-user"></span> Sign
 				In</a></li>
 		<%
 			User user = (User) session.getAttribute("usero");
 			if (user != null) {
 		%>
-		<li><a href="javascript:signOut();">Sign out</a></li>
+		<li><a href="javascript:signOut();"><span
+				class="glyphicon glyphicon-log-out"></span> Sign out</a></li>
 		<%
 			}
 		%>

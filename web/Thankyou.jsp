@@ -3,13 +3,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<jsp:include page="Header.jsp"></jsp:include>
+<jsp:include page="./WEB-INF/jsp/Header.jsp"></jsp:include>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Thank You</title>
 </head>
 <body>
 
-<% long or = System.currentTimeMillis();
+<% 
+session.removeAttribute("order");
+session.removeAttribute("tax");
+session.removeAttribute("total");
+session.removeAttribute("gtotal");
+long or = System.currentTimeMillis();
 %>
 
 <div class="container">

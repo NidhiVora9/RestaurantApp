@@ -20,7 +20,7 @@
 		User user = (User) session.getAttribute("usero");
 		if (user == null) {
 	%>
-	<h3>Please sign in to chechkout!</h3>
+	<h3 align="center">Please sign in to chechkout!</h3>
 	<%
 		} else {
 	%>
@@ -28,6 +28,7 @@
 	<div class=row>
 
 		<div class="col-xs-offset-1 col-xs-7">
+		<h3> Please Enter your Address to Checkout</h3>
 			<div class="jumbotron col-xs-12">
 				<form role="form" class="form-md" action="Thankyou.jsp">
 					<div class="form-group">
@@ -73,6 +74,7 @@
 			</div>
 			</div>
 			<div class="col-xs-offset-1 col-xs-3">
+			<h3>Order Summary</h3>
 				<div class="jumbotron col-xs-10">
 					<div class="table">
 						<table class="table table-striped">

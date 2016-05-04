@@ -9,7 +9,7 @@
 <body>
 
 	<footer class="container-fluid bg-4 text-center">
-  	<p>Made By <span class="footer_names">Parth Shah, Nidhi Vora, Hai Nguyen</span></p>
+  	<p>Made By Parth Shah, Nidhi Vora, Hai Nguyen</p>
 	</footer>
 </body>
 </html>

@@ -31,7 +31,7 @@ function openSocket()
 	}
 	
 	var ip = document.getElementById("serverIP").value;
-	webSocket = new WebSocket("ws://" + ip + ":8081/Restaurant-app/chatserver");
+	webSocket = new WebSocket("ws://" + ip + ":8080/Restaurant-app/chatserver");
 	
 	webSocket.onopen = function(event) {
 		var user = document.getElementById("thisUser").value;
