@@ -20,7 +20,6 @@
 <body>
 	<div class="container">
 		<br> <br> <br> <br>
-		
 				<%
 					Order order;
 					order = (Order) session.getAttribute("order");
