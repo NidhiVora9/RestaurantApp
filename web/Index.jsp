@@ -6,52 +6,67 @@
 <jsp:include page="./WEB-INF/jsp/Header.jsp"></jsp:include>
 </head>
 <body>
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-				<img src="./images/carousel/back_4.jpg" alt="New York">
-			</div>
-			<div class="item">
-				<img src="./images/carousel/back_2.jpg" alt="Chicago">
-			</div>
-			<div class="item">
-				<img src="./images/carousel/back_3.jpg" alt="Los Angeles">
-			</div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    	<li data-target="#myCarousel" data-slide-to="1"></li>
+    	<li data-target="#myCarousel" data-slide-to="2"></li>
+  	</ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      	<img src="./images/carousel/back_4.jpg" alt="New York">
+    </div>
+    <div class="item">
+      <img src="./images/carousel/back_2.jpg" alt="Chicago">
+    </div>
+    <div class="item">
+      <img src="./images/carousel/back_3.jpg" alt="Los Angeles">
+    </div>
+  </div>
+    
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+  	</a>
+  	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+  	</a>
+</div>
+<div class="container-fluid">
+	<div class="row text-center">
+		<div class="col-sm-4 offers">
+			<img src="images/offers/offer_1.jpg" width="300" height="250">
+			<h3>Large Pizza offer</h3>
+			<span>Large one topping pizza<h1>$8.99</h1></span>
+			<button class="btn btn-success" value="Learn More">Learn More</button>
 		</div>
-
-		<a class="left carousel-control" href="#myCarousel" role="button"
-			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
-			aria-hidden="true"></span> <span class="sr-only">Previous</span>
-		</a> <a class="right carousel-control" href="#myCarousel" role="button"
-			data-slide="next"> <span
-			class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
+		<div class="col-sm-4 offers">
+			<img src="images/offers/offer_2.jpg" width="300" height="250">
+			<h3>Two medium pizzas</h3>
+			<span>Two medium two topping pizzas for $6.99 each</span>
+			<button class="btn btn-success" value="Learn More">Learn More</button>
+		</div>
+		<div class="col-sm-4 offers">
+			<img src="images/offers/offer_3.jpg" width="300" height="250">
+			<h3>Brownie</h3>
+			<span>Try our double chocolate chip brownie $6 <h1>$6</h1></span>
+			<button class="btn btn-success" value="Learn More">Learn More</button>
+		</div>
 	</div>
-	<!-- <div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-4 offers">
-				<img src="images/offers/offer_1.jpg" width="304" height="290">
-				<h3>Large Pizza offer</h3>
-				<span>Large one topping pizza in only $10</span>
-			</div>
-			<div class="col-sm-4 offers">
-				<img src="images/offers/offer_1.jpg" width="304" height="290">
-				<h3>2 Large Pizza offer</h3>
-				<span>2 Large three topping pizza $17.99</span>
-			</div>
-			<div class="col-sm-4 offers">
-				<img src="images/offers/offer_1.jpg" width="304" height="290">
-				<h3>Large Pizza offer</h3>
-				<span>Large one topping pizza</span>
-			</div>
+	<div class="row text-center">
+		<div class="col-sm-6 offers">
+			<img src="images/offers/offer_4.jpg" width="300" height="250">
+			<h3>Pepperoni Rolls</h3>
+			<span>New Pepperoni Rolls $5</span>
 		</div>
-	</div> -->
+		<div class="col-sm-6 offers">
+			<img src="images/offers/offer_5.jpg" width="300" height="250">
+			<h3>Wings</h3>
+			<span>Add chicken wings to your order<h1>$5.99</h1></span>
+			<button class="btn btn-success" value="Learn More">Learn More</button>
+
+		</div>
 
 	<span class="text-center"><h2>We are located at</h2></span>
 	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
@@ -64,10 +79,7 @@
 			<small><a href="http://embedgooglemaps.com"> embed google
 					maps </a></small>
 		</div>
-		<div>
-			<small><a href="http://buywebtrafficexperts.com">buy
-					website traffic</a></small>
-		</div>
+
 		<style>
 #gmap_canvas img {
 	max-width: none !important;

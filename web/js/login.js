@@ -1,6 +1,5 @@
 function signOut() {
 	console.log('Signout called');
-	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '/Restaurant-app/signout',true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -11,12 +10,11 @@ function signOut() {
 	    		function () {
 	     console.log('User signed out.');
 	    });
-	
+	xhr.send();
   }
 
 function onSignIn(googleUser) {
   var id_token = googleUser.getAuthResponse().id_token;
-  
   var xhr = new XMLHttpRequest();
   xhr.open('POST', '/Restaurant-app/tokensignin',true);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -29,9 +27,8 @@ function onSignIn(googleUser) {
 	  }
   };
   xhr.send('idtoken=' + id_token);
+
 }
-
-
 function onOrder(id) {
 	  
 	  var xhr = new XMLHttpRequest();

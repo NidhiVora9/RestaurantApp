@@ -57,7 +57,6 @@ public class TokensignIn extends HttpServlet {
 		} else {
 			HttpSession session = request.getSession();
 			session.setAttribute("usero", user);
-
 			UserDBO udb = new UserDBO();
 			try {
 				if (!udb.check_user(user.getEmail())) {
