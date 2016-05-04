@@ -39,13 +39,11 @@
 		<li><a href="Index.jsp">Home</a></li>
 		<li><a href="Menu.jsp">Menu</a></li>
 		<li><a href="chatdirector">Chat</a></li>
-		<li><a href="Order.jsp">Orders</a></li>
-		<li><a href="#">Contact Us</a></li>
 	</ul>
 
 	<ul class="nav navbar-nav navbar-right">
-		<li><a href="#"><span
-				class="glyphicon glyphicons-shopping-cart"></span> My Cart</a></li>
+		<li><a href="Order.jsp"><span
+				class="glyphicon glyphicon-shopping-cart"></span> My Cart</a></li>
 		<li><a
 			href="javascript:window.open('Signin.html', 'Google+ SignIn', 'width=200,height=300');">Sign
 				In</a></li>

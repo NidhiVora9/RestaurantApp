@@ -3,6 +3,11 @@ function signOut() {
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '/Restaurant-app/signout',true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.onload = function() {
+		  var res = xhr.responseText;
+		  if(res == "200")
+			  location.reload();
+	  };
 	xhr.send();
 	
 	var auth2 = gapi.auth2.getAuthInstance();
@@ -23,6 +28,7 @@ function onSignIn(googleUser) {
 	  console.log('Signed in as: ' + res);
 	  if(res == "200")
 	  {
+		  opener.location.reload()
 		  window.close();
 	  }
   };
@@ -42,3 +48,15 @@ function onOrder(id) {
 	  xhr.send('id=' + id);
 	}
 
+function order_change(id){
+	//alert("order has been changed");
+	var xhr = new XMLHttpRequest();
+	  xhr.open('POST', '/Restaurant-app/orderchange',true);
+	  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	  xhr.onload = function() {
+		  var res = xhr.responseText;
+		  if(res == "200")
+			  location.reload();
+	  };
+	  xhr.send('orderid=' + id);
+}
