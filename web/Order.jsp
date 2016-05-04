@@ -1,3 +1,4 @@
+<%@page import="javax.websocket.Session"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="com.main.dto.Order.Item"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -18,10 +19,8 @@
 <%@ page session="true"%>
 </head>
 <body>
-
 	<div class="container">
 		<br> <br> <br> <br>
-		
 				<%
 					Order order;
 					order = (Order) session.getAttribute("order");
@@ -89,11 +88,17 @@
 			<td align="left"><%=grandtotal%></td>
 			<td></td>
 			</tr>
-			
+			<tr>
+			<td colspan="4"></td>
+			<td align="right"><input type="button" class="btn btn-info" onclick="submitOrder()" value="Checkout"></td>
+			</tr>
 			</tbody>
 			
 		</table>
-		<%
+		<%	
+				session.setAttribute("tax",tax);
+				session.setAttribute("total",total);
+				session.setAttribute("gtotal",grandtotal);
 					}
 					else
 					{
@@ -109,6 +114,7 @@
 						<%
 					}
 		%>
+		
 </div>
 </body>
 </html>

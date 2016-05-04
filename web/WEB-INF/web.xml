@@ -18,7 +18,7 @@
   </context-param>
   <context-param>
     <param-name>dburl</param-name>
-    <param-value>jdbc:oracle:thin:@localhost:1521:reslife</param-value>
+    <param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
   </context-param>
   <context-param>
     <param-name>user</param-name>
@@ -26,6 +26,6 @@
   </context-param>
   <context-param>
     <param-name>password</param-name>
-    <param-value>Parth8891</param-value>
+    <param-value>admin</param-value>
   </context-param>
 </web-app>
