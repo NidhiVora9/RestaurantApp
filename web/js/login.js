@@ -60,3 +60,7 @@ function order_change(id){
 	  };
 	  xhr.send('orderid=' + id);
 }
+
+function submitOrder(){
+	window.location.href="/Restaurant-app/billing.jsp"
+}
