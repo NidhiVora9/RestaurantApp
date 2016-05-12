@@ -33,7 +33,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="navbar-header">
 		<a class="navbar-brand" href="/Restaurant-app/Menu.jsp">Arthur's
-			Famous Pizza</a>
+			Famous Pizza <a href="Index.jsp"></a>
 	</div>
 	<ul class="nav navbar-nav ">
 		<li><a href="Index.jsp"><span
