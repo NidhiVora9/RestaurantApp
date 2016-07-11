@@ -1,0 +1,62 @@
+.navbar-nav li
+{
+	font-weight:700;
+	padding-left:10px;
+	padding-right:10px;
+}
+.navbar-brand
+{
+	color:#0277BD  !important;
+	font-weight:700;
+}
+.navbar-nav li a:hover
+{
+	background:#0277BD !important;
+	color:#ffffff !important;
+}
+.bg-4 { 
+	padding-top:12px;
+	height:50px;
+    background-color: #2f2f2f;
+    color: #ffffff;
+}
+
+.footer_names
+{
+	color:#0D47A1;
+}
+.carousel-inner
+{
+	background:#ffffff !important;
+}
+.item img {
+    width: 80%;
+    max-height:560px;
+	margin: auto;
+
+}
+.offers
+{
+	margin-top:4%;
+	border: 10px solid 	ccc;
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+#map
+{
+	width:500px;
+	height:500px;
+}
+.map-div
+{
+	border:1px solid;
+	margin-top:4%;
+}
